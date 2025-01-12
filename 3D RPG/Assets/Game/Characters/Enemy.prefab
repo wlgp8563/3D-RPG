@@ -14,6 +14,23 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2442144991277380156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264487002925160479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e81ec66d71ce5440a341290766ba180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
+  suspicionTime: 3
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDewllTime: 3
 --- !u!114 &2704933867524473541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,9 +306,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5075776939108985895 stripped
+--- !u!4 &5075776939108916893 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 438198, guid: 30cf93deff988e74e88a144bd2127c18,
+  m_CorrespondingSourceObject: {fileID: 498956, guid: 30cf93deff988e74e88a144bd2127c18,
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
@@ -307,9 +324,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5075776939108865181 stripped
+--- !u!4 &5075776939108884325 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
+  m_CorrespondingSourceObject: {fileID: 466164, guid: 30cf93deff988e74e88a144bd2127c18,
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
@@ -343,9 +360,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5075776939108884325 stripped
+--- !u!4 &5075776939108865181 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 466164, guid: 30cf93deff988e74e88a144bd2127c18,
+  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
@@ -505,15 +522,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5075776939108878343 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 461718, guid: 30cf93deff988e74e88a144bd2127c18,
-    type: 3}
-  m_PrefabInstance: {fileID: 5075776939108811665}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5075776939108892447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 474254, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 5075776939108811665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5075776939108863899 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 478218, guid: 30cf93deff988e74e88a144bd2127c18,
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
@@ -541,15 +558,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5075776939108916893 stripped
+--- !u!4 &5075776939108878343 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 498956, guid: 30cf93deff988e74e88a144bd2127c18,
+  m_CorrespondingSourceObject: {fileID: 461718, guid: 30cf93deff988e74e88a144bd2127c18,
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5075776939108863899 stripped
+--- !u!4 &5075776939108985895 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 478218, guid: 30cf93deff988e74e88a144bd2127c18,
+  m_CorrespondingSourceObject: {fileID: 438198, guid: 30cf93deff988e74e88a144bd2127c18,
     type: 3}
   m_PrefabInstance: {fileID: 5075776939108811665}
   m_PrefabAsset: {fileID: 0}
@@ -647,7 +664,17 @@ PrefabInstance:
     - target: {fileID: 4775379394268240744, guid: 2221d8121cfafc94caf9f80173a6cbb5,
         type: 3}
       propertyPath: healthPoints
-      value: 8
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512507951913582903, guid: 2221d8121cfafc94caf9f80173a6cbb5,
+        type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252591330468427958, guid: 2221d8121cfafc94caf9f80173a6cbb5,
+        type: 3}
+      propertyPath: weaponDamage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2221d8121cfafc94caf9f80173a6cbb5, type: 3}
